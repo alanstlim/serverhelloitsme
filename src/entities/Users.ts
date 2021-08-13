@@ -19,6 +19,12 @@ export class Users {
   @Column()
   email: string
 
+  @Column()
+  password: string
+
+  @Column()
+  adm: boolean
+
   @CreateDateColumn()
   created_at: Date
 

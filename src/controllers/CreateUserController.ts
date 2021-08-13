@@ -3,11 +3,11 @@ import { CreateUserService } from '../services/CreateUserService'
 
 export class CreateUserController {
   async handle(request: Request, response: Response) {
-    const { name, email } = request.body
+    const { name, email, password, adm } = request.body
 
     const createUserService = new CreateUserService()
 
-    const user = await createUserService.execute({ name, email })
+    const user = await createUserService.execute({ name, email, password, adm })
 
     return response.json(user)
   }
