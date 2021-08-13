@@ -23,7 +23,7 @@ export class Users {
   password: string
 
   @Column()
-  adm: boolean
+  admin: boolean
 
   @CreateDateColumn()
   created_at: Date

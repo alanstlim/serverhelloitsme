@@ -6,11 +6,11 @@ interface IUserRequest {
   name: string
   email: string
   password: string
-  adm?: boolean
+  admin?: boolean
 }
 
 export class CreateUserService {
-  async execute({ name, email, password, adm }: IUserRequest) {
+  async execute({ name, email, password, admin = false }: IUserRequest) {
     const usersRepositores = getCustomRepository(UsersRepositores)
 
     if (!email) {
@@ -30,7 +30,7 @@ export class CreateUserService {
     const user = usersRepositores.create({
       name,
       email,
-      adm,
+      admin,
       password: passwordHash,
     })
 
