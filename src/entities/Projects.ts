@@ -16,8 +16,8 @@ export class Projects {
   @Column()
   name: string
 
-  @Column()
-  url_img: string
+  @Column({ name: 'url_img' })
+  urlImg: string
 
   @Column()
   about: string

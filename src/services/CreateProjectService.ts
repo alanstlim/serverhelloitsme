@@ -1,9 +1,9 @@
 import { getCustomRepository } from 'typeorm'
 import { ProjectsRepositories } from '../repositories/ProjectsRepositories'
 
-interface IProjectRequest {
+export interface IProjectRequest {
   name: string
-  url_img: string
+  urlImg: string
   about: string
   functionalities: string
   technologies: string
@@ -12,7 +12,7 @@ interface IProjectRequest {
 export class CreateProjectService {
   async execute({
     name,
-    url_img,
+    urlImg,
     about,
     functionalities,
     technologies,
@@ -33,7 +33,7 @@ export class CreateProjectService {
 
     const project = projectRepositories.create({
       name,
-      url_img,
+      urlImg,
       about,
       functionalities,
       technologies,
