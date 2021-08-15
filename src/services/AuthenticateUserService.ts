@@ -30,7 +30,7 @@ export class AuthenticateUserService {
       {
         email: user.email,
       },
-      '1db08ffa999e5da75f145a5ce53c7c69',
+      process.env.SECRET_WORD,
       {
         subject: user.id,
         expiresIn: '1d',

@@ -3,7 +3,7 @@ import { ProjectsRepositories } from '../repositories/ProjectsRepositories'
 
 interface IProjectRequest {
   name: string
-  urlImg: string
+  url_img: string
   about: string
   functionalities: string
   technologies: string
@@ -12,7 +12,7 @@ interface IProjectRequest {
 export class CreateProjectService {
   async execute({
     name,
-    urlImg,
+    url_img,
     about,
     functionalities,
     technologies,
@@ -33,7 +33,7 @@ export class CreateProjectService {
 
     const project = projectRepositories.create({
       name,
-      urlImg,
+      url_img,
       about,
       functionalities,
       technologies,

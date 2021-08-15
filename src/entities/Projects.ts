@@ -8,7 +8,7 @@ import {
 
 import { v4 as uuid } from 'uuid'
 
-@Entity('project')
+@Entity('projects')
 export class Projects {
   @PrimaryColumn()
   readonly id: string
@@ -17,7 +17,7 @@ export class Projects {
   name: string
 
   @Column()
-  urlImg: string
+  url_img: string
 
   @Column()
   about: string
