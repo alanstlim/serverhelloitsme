@@ -33,7 +33,6 @@ export class CreateUserService {
       admin,
       password: passwordHash,
     })
-
     await usersRepositores.save(user)
 
     return user
